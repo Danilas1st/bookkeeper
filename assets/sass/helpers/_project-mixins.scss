@@ -1,0 +1,178 @@
+
+// Сброс стилей input
+@mixin app {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	font-family: $font_1;
+	font-size: $font_size_base;
+}
+
+// Input end
+
+
+// Flex styles
+
+@mixin flex-center {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-col {
+	flex-direction: column;
+}
+
+@mixin flex-start {
+	justify-content: flex-start;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-space {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-end {
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
+}
+
+// End flex styles
+
+// Style default btn
+
+@mixin absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin check {
+	input {
+		display: none;
+		&:checked + label:after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	label {
+		position: relative;
+		padding-left: 4.8rem;
+		color: $dark;
+		display: block;
+		font-size: 1.6rem;
+		cursor: pointer;
+		user-select: none;
+		@include bp($point_2) {
+			padding-left: 3.5rem;
+			font-size: 1.4rem;
+		}
+		a {
+			font-size: inherit;
+			border-bottom: .1rem solid $dark;
+			transition: all .3s ease;
+			&:hover {
+				border-bottom: .1rem solid $trans;
+			}
+		}
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3.3rem;
+			height: 3.3rem;
+			content: '';
+			border-radius: 1rem;
+			background-color: #eeeeee;
+			@include bp($point_2) {
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 0.5rem;
+			}
+		}
+		&:after {
+			position: absolute;
+			top: 1.3rem;
+			left: 1rem;
+			content: '';
+			width: 1.2rem;
+			height: .8rem;
+			background-image: url('../../i/global/check.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			transition: all .3s ease;
+			opacity: 0;
+			visibility: hidden;
+			@include bp($point_2) {
+				width: 1rem;
+				top: .8rem;
+				left: .7rem;
+			}
+		}
+	}
+}
+
+@mixin btn {
+	position: relative;
+	overflow: hidden;
+	border-radius: 2rem;
+	@include bp($point_2) {
+		border-radius: .5rem;
+	}
+	button {
+		padding: 2.4rem 5.6rem;
+		background-color: $dark;
+		border-radius: 2rem;
+		font-size: 1.8rem;
+		font-family: $font_2;
+		font-weight: 600;
+		color: $white;
+		width: 100%;
+		transition: all .3s ease;
+		position: relative;
+		@include bp($point_2) {
+			padding: 1.5rem 2rem;
+			border-radius: .5rem;
+		}
+		&:hover {
+			background-color: $red;
+		}
+	}
+}
+
+@mixin input {
+	input {
+		@include app;
+		padding: 2.4rem;
+		color: $dark;
+		border-radius: 1.5rem;
+		background-color: #eeeeee;
+		width: 100%;
+		font-size: 1.8rem;
+		font-family: $font_1;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			padding: 1.4rem 2rem;
+			border-radius: 0.5rem;
+		}
+	}
+}
+
+@mixin popup  {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	@include flex-center;
+}

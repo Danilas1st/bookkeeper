@@ -1,0 +1,112 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_head 
+					h1 Бухгалтерские и консалтинговые услуги
+				.hero_list 
+					ul 
+						li 
+							.list_img
+								+icon("ok")
+							.list_txt 
+								p Для малого и среднего бизнеса;
+						li 
+							.list_img
+								+icon("ok")
+							.list_txt 
+								p Юридических лиц;
+						li 
+							.list_img
+								+icon("ok")
+							.list_txt 
+								p ТСЖ, ЖСК и УК.
+				.hero_connection 
+					.connection_mobil.mob
+						a(href="#")
+							+icon("call") 
+							p +7 (812) 243 10 54
+					.connection_mail.mail
+						a(href="#")
+							+icon("mail") 
+							p info@avviso.ru
+				.hero_info
+					.info_txt 
+						p Реквизиты тут Lorem ipsum dolor sit amet consectetur. Viverra arcu morbi suspendisse in volutpat quis id.
+						p Viverra elit sed neque sed ut. Habitant ante pulvinar imperdiet odio rhoncus nunc nunc.
+	section.services 
+		.section_in 
+			.services_main.p15 
+				.services_head.mar7
+					h2 Услуги
+				.services_main_tabs
+					ul.tab_list--link 
+						each item, i in ['Бухгалтерские услуги', 'Юридические услуги']
+							if i === 0
+								li(data-tab=`tab-${i}` class="active_tab")=item
+							else 
+								li(data-tab=`tab-${i}` )=item
+					.tab_info.tabcontent(data-tab="tab-0" class="active_tab")
+						.tabcontent_booker 
+							ul 
+								-for(i = 0; i <4; i++) 
+									li 
+										a(href="#")
+											.booker_img 
+												+icon("handshake")
+											.booker_txt 
+												p ООО
+											.buker_btn 
+												p Посмотреть
+												+icon("arrowright")
+					.tab_info.tabcontent(data-tab="tab-1")
+						.tabcontent_lawyer
+							ul 
+								-for(i = 0; i <4; i++) 
+									li 
+										a(href="#")
+											.booker_img 
+												+icon("house")
+											.booker_txt 
+												p ООО
+											.buker_btn 
+												p Посмотреть
+												+icon("arrowright")
+	section.company 
+		.section_in 
+			.company_main.p15 
+				.company_head.mar7
+					h2 О компании
+					.head_btn 
+						a(href="#")
+							p Узнать больше
+							+icon("arrowright")
+				.company_info_w
+					.company_info_left 
+						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
+						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec.
+						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
+					.company_info_right 
+						img(src="i/owl.png", alt="")
+			.company_form 
+				.company_form_main
+					.company_form_head 
+						h2 Lorem ipsum dolor sit amet consectetur
+						.company_form_txt 
+							p Lorem ipsum dolor sit amet consectetur. Molestie est in et mauris tincidunt cursus
+					.company_form_tel 
+						a(href="#")
+							+icon("call")
+							p +7 (812) 243 10 54
+
+
+
+
+
+
+
+	

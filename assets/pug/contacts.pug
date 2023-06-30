@@ -1,0 +1,27 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.contacts
+		.section_in 
+			.contacts_main 
+				.contacts_head 
+					h1 Контакты
+				.contacts_info 
+					.contacts_mobil
+						p Для получения бухгалтерских и консалтинговых услуг вы можете связаться с нами по телефону:
+						a(href="#")
+							+icon("call")
+							p +7 (812) 243 10 54
+					.contacts_mail 
+						p Или по электронному адресу:
+						a(href="#")
+							+icon("mail")
+							p info@avviso.ru
+					.contacts_addres 
+						p Наш офис находится по адресу:
+						h3 199058, г. Санкт-Петербург, Морская набережная, дом 33, помещение 24-Н
+		.contacts_map 
+			.map 
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A61d58a472c29cfc5c69144e8a0f988ded1083cb94c47f2d8c2ca65fe3ee0532a&amp;width=100%25&amp;height=734&amp;lang=ru_RU&amp;scroll=false"></script>

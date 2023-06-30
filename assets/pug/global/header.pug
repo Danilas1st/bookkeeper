@@ -1,0 +1,53 @@
+header.header 
+	.section_in 
+		.header_main
+			.header_top
+				.header_logo
+					//-  img(src="#", alt="")
+				.header_contacts 
+					.header_mobil.mob
+						a(href="#")
+							+icon("call")
+							p +7 (812) 243 10 54
+					.header_mail.mail
+						a(href="#")
+							+icon("mail")
+							p info@avviso.ru
+			.header_bottom
+				nav.header_nav.link-hover
+					ul
+						-
+							let nav = [
+								{
+									name: 'Главная', 
+									link: '#'
+								},
+								{
+									name: 'Бухгалтерские услуги', 
+									link: '#'
+								},
+								{
+									name: 'Юридические услуги', 
+									link: '#',
+									submenu: true
+								},
+								{
+									name: 'О компании', 
+									link: '#'
+								},
+								{
+									name: 'Контакты', 
+									link: '#'
+								},
+							]
+						each item in nav
+							li 
+								a(href=item.link)=item.name
+								if item.submenu
+									ul.sub-menu 
+										each sub in ['Регистрация','Внесение изменений в ЕГРЮЛ и ЕГРИП','Ликвидация']
+											li 
+												a(href="#")=sub
+			
+
+				

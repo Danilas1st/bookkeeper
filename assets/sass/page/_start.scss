@@ -1,0 +1,7 @@
+.start_row {
+	height: 100vh;
+	@include flex-center;
+	h1 {
+		font-size: 10rem;
+	}
+}

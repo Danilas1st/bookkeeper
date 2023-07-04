@@ -1,0 +1,43 @@
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					//- img(src="", alt="")
+		.popup_menu 
+			ul 
+				li 
+					a(href="#" class="remove") Главная
+				li.popup_item 
+						.popup_item_head
+							p Бухгалтерские услуги
+							.popup_btn
+								button(type="button")
+									+icon('arrow')
+						.popup_item_bottom
+							a(href="#" class="remove") Регистрация
+							a(href="#" class="remove") Внесение изменений в ЕГРЮЛ и ЕГРИП
+							a(href="#" class="remove") Ликвидация
+				li.popup_item 
+						.popup_item_head
+							p Юридические услуги
+							.popup_btn
+								button(type="button")
+									+icon('arrow')
+						.popup_item_bottom 
+							a(href="#" class="remove") Регистрация
+							a(href="#" class="remove") Внесение изменений в ЕГРЮЛ и ЕГРИП
+							a(href="#" class="remove") Ликвидация   
+				li 
+					a(href="#" class="remove") О компании
+				li
+					a(href="#" class="remove") Контакты
+		.popup_contacts 
+			.popup_mobil
+				a(href="#" class="remove") +7 (812) 243 10 54
+			.popup_mail 
+				a(href="#" class="remove") info@avviso.ru

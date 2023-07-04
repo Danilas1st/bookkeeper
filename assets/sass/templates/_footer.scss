@@ -34,9 +34,20 @@
 			margin-bottom: 2rem;
 		}
 	}
+	@include bp($point_5) {
+		li {
+			flex-direction: column;
+			&:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
 }
 .info_txt {
 	margin-right: 3rem;
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
 }
 .info_mobil {
 	width: 30rem;
@@ -58,6 +69,9 @@
 	margin-right: 1rem;
 }
 .footer_right {
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .footer_menu {
 	ul {

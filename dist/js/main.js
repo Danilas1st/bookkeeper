@@ -13,6 +13,8 @@ let $body,
 	const win = document.body
 
 $(document).ready(function ($) {
+	// accordion('.icon-submenu', '.sub-menu');
+	accordion('.popup_item_head', '.popup_item_bottom');
 	$body = $('body');
 	if(devStatus) {
 		pageWidget(['index']);
@@ -30,6 +32,7 @@ $(window).on('load', function () {
 	highlightActiveMenuItem();
 	checkSubmenu();
 	accordion();
+	modal();
 	if($('.hero_main_tab')) {
 		tabs('.tab_list--link>li', '.tabcontent');
 	}
@@ -306,4 +309,52 @@ function accordion(title, content) {
 	});
 };
 
-accordion('.icon-submenu', '.sub-menu');
+
+
+
+
+
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
+
+
+
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+
+	if(swiperProject) {
+		swiperProject.init();
+	}
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}

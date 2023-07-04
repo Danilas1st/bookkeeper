@@ -1,6 +1,3 @@
-.p15 {
-	padding: 15rem 0;
-}
 .hero {
 	position: relative;
 	&:before {
@@ -17,6 +14,18 @@
 .section_in {
 }
 .hero_main {
+	@include bp($point_2) {
+		padding: 18rem 0 8rem 0;
+	}
+}
+.p15 {
+	padding: 15rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
+	@include bp($point_5) {
+		padding: 6rem 0;
+	}
 }
 .hero_head {
 	margin-bottom: 5rem;
@@ -46,6 +55,9 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 6rem;
+	@include bp($point_5) {
+		flex-direction: column;
+	}
 }
 .connection_mobil {
 	margin-right: 2rem;
@@ -60,6 +72,10 @@
 	}
 	p {
 		font-family: $font_2;
+	}
+	@include bp($point_5) {
+		margin-right: 0;
+		margin-bottom: 2rem;
 	}
 }
 .mob {
@@ -107,6 +123,9 @@
 }
 .mar7 {
 	margin-bottom: 7rem;
+	@include bp($point_5) {
+		margin-bottom: 5rem;
+	}
 }
 .services_main_tabs {
 }
@@ -126,6 +145,13 @@
 		background: var(--blue, #425EEC);
 		color: $white;
 		font-family: $font_2;
+	}
+	@include bp($point_5) {
+		li {
+			padding: 1rem 2rem;
+			text-align: center;
+			font-size: 1.6rem;
+		}
 	}
 }
 .active_tab {
@@ -171,6 +197,17 @@
 			}
 		}
 	}
+	@include bp($point_2) {
+		ul {
+			grid-gap: 3.2rem;
+		}
+	}
+	@include bp($point_5) {
+		ul {
+				grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+				grid-gap: 3.2rem;
+		}
+	}
 }
 .tabcontent_booker {
 }
@@ -205,6 +242,9 @@
 }
 .company_main {
 	padding-top: 15rem;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .company_head {
 	display: flex;
@@ -212,6 +252,13 @@
 	justify-content: space-between;
 	p {
 		font-size: 1.6rem;
+	}
+	@include bp($point_5) {
+		flex-direction: column;
+		align-items: flex-start;
+		h2 {
+			margin-bottom: 2rem;
+		}
 	}
 }
 .head_btn {
@@ -243,10 +290,24 @@
 			margin-bottom: 3rem;
 		}
 	}
-}
+	@include bp($point_2) {
+		max-width: none;
+	}
+	@include bp($point_5) {
+		p {
+			&:before {
+				display: none;
+			}
+			padding-left: 0;
+		}
+	}
+ }
 .company_info_right {
 	img {
 		height: 74.6rem;
+	}
+	@include bp($point_2) {
+		display: none;
 	}
 }
 .company_bottom_form {
@@ -259,11 +320,17 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 8.9rem 0;
+	@include bp($point_5) {
+		flex-direction: column;
+	}
 }
 .company_form_head {
 	h2 {
 		color: $white;
 		margin-bottom: 2rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;
 	}
 }
 .company_form_txt {
@@ -298,6 +365,13 @@
 		transform: translateX(-50%);
 		z-index: -1;
 	}
+	@include bp($point_5) {
+		&:before {
+			width: 20rem;
+			height: 20rem;
+			top: -6.5rem;
+		} 
+	}
 }
 
 .about {
@@ -312,6 +386,9 @@
 }
 .about_col_left {
 	max-width: 83rem;
+	@include bp($point_2) {
+		max-width: none;
+	}
 }
 .about_head {
 	h1 {
@@ -348,6 +425,15 @@
 			margin-bottom: 3rem;
 		}
 	}
+	@include bp($point_5) {
+		max-width: none;
+		P {
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
+		}
+	} 
 }
 .txt_img {
 }
@@ -355,6 +441,9 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .about_form {
 	background: $blue;
@@ -377,6 +466,11 @@
 	&:before {
 		left: -2.5%;
 		transform: translateX(0);
+	}
+	@include bp($point_5) {
+		&:before {
+			left: 10.5%;
+		}
 	}
 }
 .telefon {
@@ -409,6 +503,11 @@
 		font-size: 2.7rem;
 		font-family: $font_2;
 	}
+	@include bp($point_5) {
+		a {
+			font-size: 2.2rem;
+		}
+	}
 }
 .icon {
 }
@@ -416,6 +515,10 @@
 	margin-right: 1rem;
 	width: 2.4rem;
 	height: 2.4rem;
+	@include bp($point_5) {
+		width: 2.2rem;
+		height: 2.2rem;
+	}
 }
 .contacts_mail {
 	p {
@@ -427,18 +530,40 @@
 		font-size: 2.7rem;
 		font-family: $font_2;
 	}
+	@include bp($point_5) {
+		a {
+			font-size: 2.2rem;
+		}
+	}
 }
 .icon-contmail {
 	margin-right: 1rem;
 	width: 2.4rem;
 	height: 2.4rem;
+	@include bp($point_5) {
+		width: 2.2rem;
+		height: 2.2rem;
+	}
 }
 .contacts_addres {
 	p {
 		margin-bottom: 3rem;
 	}
+	@include bp($point_2) {
+		h3 {
+			font-size: 2.5rem;
+		}
+	}
+	@include bp($point_5) {
+		h3 {
+			font-size: 2.2rem;
+		}
+	}
 }
 .contacts_map {
+	@include bp($point_5) {
+		padding: 0 2rem;
+	}
 }
 .map {
 }
@@ -451,6 +576,9 @@
 }
 .service_col_left {
 	max-width: 83rem;
+	@include bp($point_2) {
+		max-width: none;
+	}
 }
 .service_head {
 	h1 {
@@ -472,7 +600,9 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .rates {
 }
@@ -485,6 +615,9 @@
 .rates_txt {
 }
 .rates_table {
+	@include bp($point_5) {
+		overflow-y: scroll;
+	}
 }
 .table {
 	position: relative;
@@ -522,5 +655,8 @@
 		&:nth-child(n+29) {
 			background: $white;
 		}
+	}
+	@include bp($point_5) {
+		width: 55rem;
 	}
 }

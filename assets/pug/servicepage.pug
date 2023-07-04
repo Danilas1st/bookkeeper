@@ -4,24 +4,39 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
 	section.service
-		.service_main 
-			.service_col_left 
-				.service_head 
-					h1 Внесение изменений в ЕГРЮЛ и ЕГРИП
-				.service_txt 
-					p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
-					p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec.
-					p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur. Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique.
-			.service_col_right 
-				img(src="i/service.png", alt="")
+		.section_in
+			.service_main 
+				.service_col_left.p15
+					.service_head.mar7
+						h1 Внесение изменений в ЕГРЮЛ и ЕГРИП
+					.service_txt 
+						p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
+						p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec.
+						p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur. Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique.
+				.service_col_right 
+					img(src="i/service.png", alt="")
 	section.rates 
 		.section_in 
-			.rates_main 
-				.rates_head 
+			.rates_main.p15
+				.rates_head.mar7 
 					h2 Тарифы
-				.rates_txt 
+				.rates_txt.mar7
 					p <span>Lorem ipsum dolor sit amet consectetur.</span> Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec.
 				.rates_table 
 					.table 
-						
+						ul 
+							each val in ['Параметр 1', 'Параметр 2', 'Параметр 3', 'Цена', 'Текст', 'Текст', 'Текст', '10 000 руб.', 'Текст', 'Текст', 'Текст', '10 000 руб.',  'Текст', 'Текст', 'Текст',  '10 000 руб.',  'Текст', 'Текст', 'Текст', '10 000 руб.',  'Текст', 'Текст', 'Текст', '10 000 руб.']
+								li= val
+	section.company_bottom_form 
+		.section_in
+			.company_form 
+				.company_form_main
+					.company_form_head 
+						h2 Lorem ipsum dolor sit amet consectetur
+						.company_form_txt 
+							p Lorem ipsum dolor sit amet consectetur. Molestie est in et mauris tincidunt cursus
+					.company_form_tel.telefon
+						a(href="#")
+							+icon("call")
+							p +7 (812) 243 10 54
 

@@ -4,10 +4,10 @@ block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
 	section.hero 
-		.section_in 
-			.hero_main 
+		.section_in
+			.hero_main.p15
 				.hero_head 
-					h1 Бухгалтерские и консалтинговые услуги
+					h1 Бухгалтерские<br> и консалтинговые услуги
 				.hero_list 
 					ul 
 						li 
@@ -35,7 +35,7 @@ block content_block
 							+icon("mail") 
 							p info@avviso.ru
 				.hero_info
-					.info_txt 
+					.hero_info_txt 
 						p Реквизиты тут Lorem ipsum dolor sit amet consectetur. Viverra arcu morbi suspendisse in volutpat quis id.
 						p Viverra elit sed neque sed ut. Habitant ante pulvinar imperdiet odio rhoncus nunc nunc.
 	section.services 
@@ -44,7 +44,7 @@ block content_block
 				.services_head.mar7
 					h2 Услуги
 				.services_main_tabs
-					ul.tab_list--link 
+					ul.tab_list--link.mar7
 						each item, i in ['Бухгалтерские услуги', 'Юридические услуги']
 							if i === 0
 								li(data-tab=`tab-${i}` class="active_tab")=item
@@ -78,27 +78,28 @@ block content_block
 												+icon("arrowright")
 	section.company 
 		.section_in 
-			.company_main.p15 
-				.company_head.mar7
-					h2 О компании
-					.head_btn 
-						a(href="#")
-							p Узнать больше
-							+icon("arrowright")
+			.company_main
 				.company_info_w
 					.company_info_left 
+						.company_head.mar7
+							h2 О компании
+							.head_btn 
+								a(href="#") Узнать больше
+									+icon("arrowright")
 						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
 						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec.
 						p Lorem ipsum dolor sit amet consectetur. Dolor ut facilisis lacus sit vel tempor aliquam arcu. Sit interdum faucibus tortor viverra fusce etiam id feugiat. Tempor facilisi venenatis volutpat est donec. Quis iaculis mauris enim etiam turpis tristique. Diam neque nibh nisi quis. Nullam orci erat viverra non mollis nisl ridiculus nunc id. Egestas viverra in malesuada elit turpis imperdiet. Dignissim sem in lectus egestas dictum ut. Sed sit enim in consectetur.
 					.company_info_right 
 						img(src="i/owl.png", alt="")
+	section.company_bottom_form 
+		.section_in
 			.company_form 
 				.company_form_main
 					.company_form_head 
 						h2 Lorem ipsum dolor sit amet consectetur
 						.company_form_txt 
 							p Lorem ipsum dolor sit amet consectetur. Molestie est in et mauris tincidunt cursus
-					.company_form_tel 
+					.company_form_tel.telefon
 						a(href="#")
 							+icon("call")
 							p +7 (812) 243 10 54

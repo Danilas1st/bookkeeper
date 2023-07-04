@@ -6,7 +6,7 @@ img {
 }
 
 h1 {
-	font-size: 5.5rem;
+	font-size: 3.6rem;
 	font-family: $font_2;
 	color: $white;
 	font-weight: 500;
@@ -16,7 +16,7 @@ h1 {
 }
 // End
 h2, h3, h4, h5, h6 {
-	font-size: 4.5rem;
+	font-size: 3.6rem;
 	font-family: $font_2;
 	color: $dark;
 	font-weight: 500;
@@ -27,6 +27,7 @@ h2, h3, h4, h5, h6 {
 
 .global_txt {
 	p, ul, ol, span {
+		font-size: 1.6rem;
 		@include bp($point_2) {
 			font-size: 1.6rem;
 		}

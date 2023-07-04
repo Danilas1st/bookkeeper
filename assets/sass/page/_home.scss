@@ -441,6 +441,18 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	@include bp(1367px) {
+		right: -28rem;
+		img {
+			width: 71.2%;
+		}
+	}
+	@include bp(1281px) {
+		right: -35rem;
+		img {
+			width: 66.6%;
+		}
+	}
 	@include bp($point_2) {
 		display: none;
 	}
@@ -600,6 +612,18 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	@include bp(1367px) {
+		right: -26rem;
+		img {
+			width: 74.7%;
+		}
+	}
+	@include bp(1281px) {
+		right: -32rem;
+		img {
+			width: 69.9%;
+		}
+	}
 	@include bp($point_2) {
 		display: none;
 	}

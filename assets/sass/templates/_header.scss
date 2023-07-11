@@ -73,9 +73,11 @@
 		align-items: center;
 	}
 	li {
-		padding: 1.5rem 3rem;
 		cursor: pointer;
+		height: 5rem;
 		position: relative;
+		display: flex;
+		align-items: center;
 		&:hover {
 			background: $lightgrey;
 		}
@@ -89,6 +91,9 @@
 					transform: rotate(180deg);	
 				}
 			}
+		}
+		a {
+			padding: 1.5rem 3rem;
 		}
 }
 .link-hover {
@@ -110,7 +115,6 @@
 	li {
 		margin-right: 0!important;
 		position: relative;
-		padding: 1.2rem 0 1.2rem 3rem;
 		width: 100%;
 		&:not(:last-child) {
 			&:before {
@@ -123,9 +127,10 @@
 				bottom: 0;
 				z-index: 20;
 			}
-		}
-		a {
+	}
+	a {
 			font-size: 1.6rem;
+			width: 100%;
 		}
 	}
 }
@@ -134,8 +139,8 @@
 	&:before {
 		position: absolute;
 		content: '';
-		top: -2.1rem;
-		right: -2.5rem;
+		top: -1.1rem;
+		right: .5rem;
 		background: url('../../i/iconmenu.png') center/cover no-repeat;
 		width: 2rem;
 		height: 2rem;

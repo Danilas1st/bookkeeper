@@ -329,6 +329,9 @@
 		color: $white;
 		margin-bottom: 2rem;
 	}
+	@include bp(821px) {
+		max-width: 50rem;
+	}
 	@include bp($point_5) {
 		margin-bottom: 3rem;
 	}
@@ -348,7 +351,7 @@
 		border-radius: 3rem;
 		transition: all .3s ease;
 		&:hover {
-				color: $blue;
+			color: $blue;
 		}
 	}
 	p {
@@ -364,6 +367,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: -1;
+		filter: blur(60px);
 	}
 	@include bp($point_5) {
 		&:before {
@@ -558,6 +562,9 @@
 	}
 }
 .contacts_addres {
+	h3 {
+		font-size: 2.7rem;
+	}
 	p {
 		margin-bottom: 3rem;
 	}
@@ -573,8 +580,10 @@
 	}
 }
 .contacts_map {
-	@include bp($point_5) {
+
+	@include bp($point_2) {
 		padding: 0 2rem;
+		max-height: 40rem;
 	}
 }
 .map {
@@ -587,7 +596,8 @@
 	display: flex;
 }
 .service_col_left {
-	max-width: 83rem;
+	max-width: 88rem;
+	padding: 15.3rem 0;
 	@include bp($point_2) {
 		max-width: none;
 	}
@@ -613,15 +623,15 @@
 	top: 0;
 	right: 0;
 	@include bp(1367px) {
-		right: -26rem;
+		right: -29rem;
 		img {
-			width: 74.7%;
+			width: 71%;
 		}
 	}
 	@include bp(1281px) {
-		right: -32rem;
+		right: -35rem;
 		img {
-			width: 69.9%;
+			width: 66.9%;
 		}
 	}
 	@include bp($point_2) {

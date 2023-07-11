@@ -9,11 +9,15 @@
 		line-height: 2.6rem;
 	}
 	h1 {
+		color: $dark;
 		font-size: 3rem;
 		margin-bottom: 3rem;
 		@include bp($point_2) {
 			font-size: 2.2rem;
 		}
+	}
+	@include bp($point_5) {
+		padding: 4rem 0;
 	}
 }
 .policy_list>li {
